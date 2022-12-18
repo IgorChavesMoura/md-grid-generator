@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.reboot.min.css" >
+        <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css" >
+        <script type="text/javascript" src="dist/bootstrap/js/bootstrap.min.js"></script>
+        <script type="module" src="dist/md-block/md-block.js"></script>
+        <title>Markdown Grid Generator</title>
+        <link rel="stylesheet" href="src/styles.css" >
+        <script defer type="module" src="src/main.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Markdown Grid Generator</span>
+            </div>
+        </nav>
+        <main class="container-fluid" >
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="inputs mt-5">
+                        <div class="form-control">
+                            <label for="rows-input" class="form-label">Rows</label>
+                            <input type="range" class="form-range" id="rows-input" min="1" max="10" step="1" value="2" >
+                            <label for="columns-input" class="form-label">Columns</label>
+                            <input type="range" class="form-range" id="columns-input" min="1" max="10" step="1" value="4" >
+                        </div>
+                    </div>
+                    <button id="copy-md" class="mt-2" >Copy markdown source</button>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="preview mt-5 p-5">
+                        <md-block></md-block>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
